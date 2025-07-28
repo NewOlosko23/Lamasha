@@ -36,7 +36,8 @@ const Programs = () => {
           Our Services
         </h2>
         <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-12">
-          Lamasha offers flexible programs designed for modern parents and growing kids, all in a safe, happy place.
+          Lamasha offers flexible programs designed for modern parents and
+          growing kids, all in a safe, happy place.
         </p>
 
         <div className="grid gap-8 md:grid-cols-2">
