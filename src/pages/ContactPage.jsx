@@ -9,7 +9,7 @@ import {
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-pink-50 py-20 px-6">
+    <section id="contact" className="bg-pink-50 py-20 px-6 mt-10">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-pink-600 mb-12">
           Get in Touch
@@ -22,7 +22,7 @@ const Contact = () => {
               <FaPhone className="text-2xl mt-1" />
               <div>
                 <h4 className="font-semibold">Phone</h4>
-                <p className="text-gray-700">+254 712 345678</p>
+                <p className="text-gray-700">+254 724 414 548</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -30,7 +30,7 @@ const Contact = () => {
               <div>
                 <h4 className="font-semibold">WhatsApp</h4>
                 <a
-                  href="https://wa.me/254712345678"
+                  href="https://wa.me/254724414548"
                   className="text-green-600 hover:underline"
                   target="_blank"
                   rel="noreferrer"
@@ -50,7 +50,7 @@ const Contact = () => {
               <FaMapMarkerAlt className="text-2xl mt-1" />
               <div>
                 <h4 className="font-semibold">Address</h4>
-                <p className="text-gray-700">Ngege Road, Homa Bay, Kenya</p>
+                <p className="text-gray-700">Site, Homa Bay, Kenya</p>
               </div>
             </div>
             <div className="flex items-start gap-4">

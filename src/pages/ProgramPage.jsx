@@ -1,6 +1,17 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaBaby, FaBook, FaHeart, FaUsers } from "react-icons/fa";
+import {
+  FaBaby,
+  FaBook,
+  FaHeart,
+  FaUsers,
+  FaChevronDown,
+} from "react-icons/fa";
+
+import Image1 from "../assets/9.jpeg";
+import Image2 from "../assets/11.jpeg";
+import Image3 from "../assets/13.jpeg";
+import { Link } from "react-router-dom";
 
 const ageGroups = [
   {
@@ -13,7 +24,7 @@ const ageGroups = [
       "Music & Movement",
     ],
     ratio: "1:3",
-    image: "/images/babies.jpg",
+    image: Image1,
   },
   {
     label: "1–2 Years",
@@ -27,7 +38,7 @@ const ageGroups = [
     ],
     curriculum: ["Colors & Shapes", "Fine Motor Skills", "First Words"],
     ratio: "1:5",
-    image: "/images/toddlers.jpg",
+    image: Image2,
   },
   {
     label: "2–3 Years",
@@ -41,19 +52,18 @@ const ageGroups = [
     ],
     curriculum: ["Language Building", "Counting", "Social Skills"],
     ratio: "1:7",
-    image: "/images/preschoolers.jpg",
+    image: Image3,
   },
 ];
 
 const Programs = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-
   const active = ageGroups[activeIndex];
 
   return (
     <section
       id="programs"
-      className="py-20 bg-gradient-to-b from-pink-50 to-white px-6"
+      className="py-20 bg-gradient-to-b from-pink-50 to-white px-6 mt-10"
     >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-pink-600 mb-12">
@@ -138,7 +148,7 @@ const Programs = () => {
         {/* Divider */}
         <div className="my-20 border-t border-pink-200" />
 
-        {/* Drop-In / Emergency Care */}
+        {/* Drop-In & Emergency Care Section */}
         <div className="text-center">
           <h3 className="text-3xl font-bold text-pink-600 mb-4">
             Drop-In & Emergency Care
@@ -147,33 +157,48 @@ const Programs = () => {
             Life happens — and we're here for you. Use our flexible drop-in or
             emergency care when you need it most. No stress, just loving hands.
           </p>
-          <a
-            href="#"
+          <Link
+            to="/enroll"
             className="inline-block bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg transition"
           >
             Quick Sign-Up
-          </a>
+          </Link>
 
-          {/* FAQs */}
-          <div className="mt-10 max-w-2xl mx-auto text-left">
-            <details className="mb-4 bg-white p-4 rounded shadow cursor-pointer">
-              <summary className="font-semibold text-pink-700">
-                How fast can I book?
-              </summary>
-              <p className="text-sm mt-2 text-gray-600">
-                You can request same-day care for emergencies if space is
-                available.
-              </p>
-            </details>
-            <details className="mb-4 bg-white p-4 rounded shadow cursor-pointer">
-              <summary className="font-semibold text-pink-700">
-                Are weekends covered?
-              </summary>
-              <p className="text-sm mt-2 text-gray-600">
-                Yes! Weekend care is available with prior booking. Please
-                contact us to check availability.
-              </p>
-            </details>
+          {/* Modern FAQ Accordion */}
+          <div className="mt-12 max-w-2xl mx-auto text-left space-y-4">
+            {[
+              {
+                question: "How fast can I book?",
+                answer:
+                  "You can request same-day care for emergencies if space is available. We respond quickly to ensure your child is accommodated.",
+              },
+              {
+                question: "Are weekends covered?",
+                answer:
+                  "Yes! Weekend care is available with prior booking. We recommend reaching out at least 24 hours in advance.",
+              },
+              {
+                question: "Is drop-in care safe?",
+                answer:
+                  "Absolutely. All children in drop-in programs receive the same care, attention, and safety as our full-time members.",
+              },
+              {
+                question: "What do I need to bring?",
+                answer:
+                  "We recommend a change of clothes, diapers (if needed), snacks, and any comfort item your child enjoys. We provide everything else.",
+              },
+            ].map((faq, index) => (
+              <details
+                key={index}
+                className="bg-white rounded-lg p-4 shadow group cursor-pointer"
+              >
+                <summary className="flex justify-between items-center text-pink-700 font-semibold">
+                  {faq.question}
+                  <FaChevronDown className="transition-transform duration-300 group-open:rotate-180" />
+                </summary>
+                <p className="text-sm text-gray-600 mt-2">{faq.answer}</p>
+              </details>
+            ))}
           </div>
         </div>
       </div>

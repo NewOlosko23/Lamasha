@@ -49,7 +49,7 @@ const Enroll = () => {
   const prevStep = () => setStep(step - 1);
 
   return (
-    <section id="enroll" className="bg-pink-50 py-20 px-6">
+    <section id="enroll" className="bg-pink-50 py-20 px-6 mt-10">
       <div className="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg">
         <h2 className="text-3xl font-bold text-pink-600 text-center mb-8">
           Enroll Your Child

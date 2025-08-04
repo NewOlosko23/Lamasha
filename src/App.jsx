@@ -11,11 +11,13 @@ import BookTour from "./pages/Tour";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
 
 function App() {
   return (
     <>
       <Header />
+      <BackToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/programs" element={<Programs />} />

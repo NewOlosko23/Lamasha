@@ -35,7 +35,7 @@ const Tour = () => {
   return (
     <section
       id="book-tour"
-      className="py-20 px-6 bg-gradient-to-b from-white to-pink-50"
+      className="py-20 px-6 bg-gradient-to-b from-white to-pink-50 mt-10"
     >
       <div className="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-pink-600 mb-8">

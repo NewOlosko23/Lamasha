@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 
+import Logo from "../assets/17.jpeg";
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -18,8 +20,15 @@ const Header = () => {
     <header className="w-full bg-white shadow-md fixed top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold text-pink-600">
-          Lamasha Daycare
+        <Link to="/" className="flex items-center space-x-2">
+          <img
+            src={Logo}
+            alt="Lamasha Logo"
+            className="w-10 h-10 rounded-full object-cover"
+          />
+          <span className="text-2xl font-bold text-pink-600 whitespace-nowrap">
+            Lamasha Daycare
+          </span>
         </Link>
 
         {/* Desktop Nav */}
