@@ -12,12 +12,14 @@ import BookTour from "./pages/Tour";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
       <Header />
       <BackToTop />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/programs" element={<Programs />} />
@@ -26,7 +28,6 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/enroll" element={<Enroll />} />
         <Route path="/tour" element={<BookTour />} />
-        {/* Add more routes as needed */}
       </Routes>
       <Footer />
     </>

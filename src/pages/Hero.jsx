@@ -20,7 +20,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="relative z-10 px-6 py-10 bg-white/20 backdrop-blur-md rounded-xl shadow-xl text-center text-white max-w-2xl"
+        className="relative z-10 px-6 mx-3 py-10 bg-white/20 backdrop-blur-md rounded-xl shadow-xl text-center text-white max-w-2xl"
       >
         <h1 className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow">
           Safe Hands, Happy Hearts

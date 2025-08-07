@@ -22,13 +22,13 @@ const Footer = () => {
           </h4>
           <ul className="text-gray-300 text-sm space-y-2">
             <li className="flex items-center gap-2">
-              <Phone size={16} /> +254 700 123 456
+              <Phone size={16} /> +254 724 414 548
             </li>
             <li className="flex items-center gap-2">
-              <Mail size={16} /> info@lamasha.co.ke
+              <Mail size={16} /> contact@lamashadaycare.co.ke
             </li>
             <li className="flex items-center gap-2">
-              <MapPin size={16} /> Homa Bay, Kenya
+              <MapPin size={16} /> Site, Homa Bay, Kenya
             </li>
           </ul>
         </div>
@@ -50,7 +50,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/services" className="hover:text-pink-400 transition">
+              <Link to="/programs" className="hover:text-pink-400 transition">
                 Our Programs
               </Link>
             </li>
