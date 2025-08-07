@@ -1,15 +1,27 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
+import { signOut } from "firebase/auth";
 
 import Logo from "../assets/17.jpeg";
+import { useAuth } from "../context/AuthContext";
+import { auth } from "../firebase";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { user } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await signOut(auth);
+    navigate("/login");
+  };
 
   const navLinks = [
-    { name: "Home", path: "/" },
+    user
+      ? { name: "Dashboard", path: "/dashboard" }
+      : { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Programs", path: "/programs" },
     { name: "Gallery", path: "/gallery" },
@@ -32,7 +44,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex space-x-6 items-center">
           {navLinks.map(({ name, path }, i) => (
             <motion.div
               key={i}
@@ -47,6 +59,16 @@ const Header = () => {
               </Link>
             </motion.div>
           ))}
+
+          {user && (
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={handleLogout}
+              className="ml-4 px-4 py-1 text-sm bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition"
+            >
+              Logout
+            </motion.button>
+          )}
         </nav>
 
         {/* Mobile Hamburger */}
@@ -79,6 +101,18 @@ const Header = () => {
                 {name}
               </Link>
             ))}
+
+            {user && (
+              <button
+                onClick={() => {
+                  handleLogout();
+                  setMenuOpen(false);
+                }}
+                className="text-pink-600 font-medium hover:underline"
+              >
+                Logout
+              </button>
+            )}
           </div>
         </motion.div>
       )}

@@ -10,7 +10,7 @@ import Image4 from "../assets/5.jpeg";
 
 const team = [
   {
-    name: "Grace Achieng",
+    name: "Luke Odhiambo",
     title: "Founder & Director",
     image: Logo,
     bio: "A passionate early childhood educator with over 10 years of experience in nurturing young minds.",
@@ -18,13 +18,13 @@ const team = [
   {
     name: "Samuel Otieno",
     title: "Head Caregiver",
-    image: Image2,
+    image: Logo,
     bio: "Brings warmth and structure to the classroom, making every child feel at home.",
   },
   {
     name: "Linda Wambui",
     title: "Nutrition & Health Lead",
-    image: Image3,
+    image: Logo,
     bio: "Ensures every child receives balanced meals and maintains top hygiene standards.",
   },
 ];
