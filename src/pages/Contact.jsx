@@ -27,7 +27,7 @@ const Contact = () => {
               </p>
               <p className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-sky-600" />
-                contact@lamashadaycare.co.ke
+                info@lamasha-daycare.co.ke
               </p>
               <p className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-sky-600" />

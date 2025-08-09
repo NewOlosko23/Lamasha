@@ -25,7 +25,8 @@ const Footer = () => {
               <Phone size={16} /> +254 724 414 548
             </li>
             <li className="flex items-center gap-2">
-              <Mail size={16} /> contact@lamashadaycare.co.ke
+              <Mail size={16} />
+              info@lamasha-daycare.co.ke
             </li>
             <li className="flex items-center gap-2">
               <MapPin size={16} /> Site, Homa Bay, Kenya

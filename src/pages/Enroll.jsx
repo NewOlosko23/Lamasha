@@ -56,12 +56,12 @@ const Enroll = () => {
         </h2>
 
         {/* Step Tracker */}
-        <div className="flex justify-between text-sm mb-8">
+        <div className="flex flex-wrap gap-2 sm:gap-4 justify-center mb-8">
           {["Parent Info", "Program", "Schedule", "Documents"].map(
             (label, idx) => (
               <div
                 key={idx}
-                className={`flex-1 text-center py-2 rounded-full ${
+                className={`flex-1 sm:flex-none text-center py-2 px-3 rounded-full text-xs sm:text-sm transition-all duration-300 ${
                   step === idx + 1
                     ? "bg-pink-500 text-white"
                     : "bg-pink-100 text-pink-600"

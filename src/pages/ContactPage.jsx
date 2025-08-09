@@ -10,7 +10,7 @@ import {
 const Contact = () => {
   return (
     <section id="contact" className="bg-pink-50 py-20 px-6 mt-10">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-pink-600 mb-12">
           Get in Touch
         </h2>
@@ -43,7 +43,7 @@ const Contact = () => {
               <FaEnvelope className="text-2xl mt-1" />
               <div>
                 <h4 className="font-semibold">Email</h4>
-                <p className="text-gray-700">info@lamashadaycare.co.ke</p>
+                <p className="text-gray-700">info@lamasha-daycare.co.ke</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -112,14 +112,15 @@ const Contact = () => {
         {/* Google Map */}
         <div className="mt-20 rounded-xl overflow-hidden shadow-lg">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.323745135284!2d34.470179946716306!3d-0.5274229611055164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa6bb88f04fbf%3A0xd1847caaa2a3b7f5!2sHoma%20Bay!5e0!3m2!1sen!2ske!4v1696338780742!5m2!1sen!2ske"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1090.114614677564!2d34.4583390284175!3d-0.5357489236654939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMMKwMzInMDcuOCJTIDM0wrAyNycyOS41IkU!5e1!3m2!1sen!2ske!4v1754724298142!5m2!1sen!2ske"
             width="100%"
-            height="400"
+            height="450"
             allowFullScreen=""
             loading="lazy"
-            title="Lamasha Location"
-            className="w-full border-0"
-          ></iframe>
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Lamasha Daycare Location"
+            className="w-full border-0 rounded-xl shadow-lg"
+          />
         </div>
       </div>
     </section>
